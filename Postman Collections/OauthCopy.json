@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "97b7d2e5-6074-4394-983a-bb62a839c063",
+		"name": "Oauth Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCode",
+			"_postman_id": "d7f321b5-69d4-469b-87df-23e7848a085f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"google",
+						"com"
+					],
+					"path": [
+						"o",
+						"oauth2",
+						"v2",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/userinfo.email"
+						},
+						{
+							"key": "auth_url",
+							"value": "https://accounts.google.com/o/oauth2/v2/auth"
+						},
+						{
+							"key": "client_id",
+							"value": "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://rahulshettyacademy.com/getCourse.php"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Access Token",
+			"_postman_id": "43e01cad-e795-4731-8191-3047b61b84dc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/oauth2/v4/token?code=4%2F0AY0e-g6UUD1-sMKIpsxzb520ZVflKe7i8xD_oQk6X3t_fjDqhaROnrJncgGX7dEF0jllVg&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&client_secret=erZOWM9g3UtwNRj340YYaK_W&redirect_uri=https://rahulshettyacademy.com/getCourse.php&grant_type=authorization_code#",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"v4",
+						"token"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "4%2F0AY0e-g6UUD1-sMKIpsxzb520ZVflKe7i8xD_oQk6X3t_fjDqhaROnrJncgGX7dEF0jllVg"
+						},
+						{
+							"key": "client_id",
+							"value": "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com"
+						},
+						{
+							"key": "client_secret",
+							"value": "erZOWM9g3UtwNRj340YYaK_W"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://rahulshettyacademy.com/getCourse.php"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/userinfo.email",
+							"disabled": true
+						},
+						{
+							"key": "response_type",
+							"value": "code",
+							"disabled": true
+						},
+						{
+							"key": "authuser",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "prompt",
+							"value": "consent",
+							"disabled": true
+						}
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Acutal Request",
+			"_postman_id": "36feba22-4976-4f4b-ba9a-01aa2266582e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rahulshettyacademy.com/getCourse.php?access_token=ya29.a0ARrdaM-PvBzo7A0GNM-9gzNoW1cyCxJi6FEx0zhIQpgjcfL1VWcwDehCi11cRSVYYgWRT3mmRzXsVhTjY_M5MTquxTnL_W5f12m_UU3Vcgot29zWIyyFwE5gdBCycpZrG-EEBgQXFtgSNy9M-nitMrzCKqJn",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"getCourse.php"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "ya29.a0ARrdaM-PvBzo7A0GNM-9gzNoW1cyCxJi6FEx0zhIQpgjcfL1VWcwDehCi11cRSVYYgWRT3mmRzXsVhTjY_M5MTquxTnL_W5f12m_UU3Vcgot29zWIyyFwE5gdBCycpZrG-EEBgQXFtgSNy9M-nitMrzCKqJn"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
